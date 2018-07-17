@@ -55,33 +55,20 @@ print("字符串中共有{}个大写字母，{}个小写字母，{}个数字".fo
 '''
 
 s = input("输入一个字符串:")
-s1 = s.split( ) 
-while i < len(s1):
-	
-	s2 = s1[i] 
-
-	j = 1
+#print(s.title())
+i = 0
+flag = True
+while i < len(s):
+	if ord('A')<= ord(s[i])<= ord('Z') or ord('a') <= ord(s[i]) <= ord('z'):
+		if flag:#首字母
+			print(s[i].upper(), end='')
+			flag = False
+		else:
+			print(s[i].lower(), end='')
+	elif s[i] == ' ':
+		flag = True
+		print(s[i], end='')
+	else:
+		print(s[i], end='')
 	i += 1
-	while j < len(s2):
-		j += 1
-		if ord('a') <= ord(s2[0])<= ord('z') 
-			ord(s2[0]) = ord(s2[0]) - (ord('a') - ord('A')) 
-		elif ord('A') <= ord(s2[j]) <= ord('Z'):
-			chr(ord(s2[j])) = chr(ord(s2[j]) + (ord('a') - ord('A')))
-
-print(s2)
-
-
-
-
-
-
-
-
-
-
-
-
-s= "boy,fdf yj r4,hr    fg"
-print(s.split( ))
-
+print() 
