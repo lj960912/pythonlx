@@ -22,9 +22,8 @@ else:
 	print("num1大于num2")
 
 
-'''
 #比较字符串大小，只跟第一个不相同的字符大小有关
-'''
+
 str1 = input("输入一个字符串:")
 str2 = input("输入字符串:")
 i = 0
@@ -52,7 +51,7 @@ for i in str3:
 	elif i.isdigit():
 		digit_cnt += 1
 print("字符串中共有{}个大写字母，{}个小写字母，{}个数字".format(upper_cnt,lower_cnt,digit_cnt))
-'''
+
 
 s = input("输入一个字符串:")
 #print(s.title())
@@ -72,3 +71,56 @@ while i < len(s):
 		print(s[i], end='')
 	i += 1
 print() 
+
+'''
+
+'''
+import time
+def testhello():
+	print("hello")
+
+if __name__ == "__mian__":
+	print(dir(time))
+	print(__name__)
+	print("this is myself file")
+testhello()
+'''
+'''
+import sys
+def add2num(num1,num2):
+	return num1 + num2
+if __name__ == "__main__":
+	if len(sys.argv) < 3:
+		print("参数不够")
+	else:
+		print(add2num(int(sys.argv[1]), int(sys.argv[2])))
+
+
+'''
+
+
+
+fd = open("725","w+")
+'''
+#print(fd.read())
+fd.write("boy  \ngirle\n")
+print("当前文件的偏移量:{}".format(fd.seek(6,0)))
+
+r = fd.read()
+print(r)
+fd.close()
+
+
+
+with open("724","a") as f:
+	print(f.tell())
+'''
+
+
+
+
+
+
+
+
+
